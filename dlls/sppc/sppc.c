@@ -58,6 +58,20 @@ HRESULT WINAPI SLClose(HSLC handle)
     return S_OK;
 }
 
+HRESULT WINAPI SLGetApplicationPolicy(HSLP context, PCWSTR policyName, SLDATATYPE *dataType, UINT size, PBYTE *data)
+{
+    FIXME("(%p,%s,%p,%d,%p) stub\n", context, debugstr_w(policyName), dataType, size, data);
+
+    return SL_E_VALUE_NOT_FOUND;
+}
+
+HRESULT WINAPI SLLoadApplicationPolicies(const SLID *app, const SLID *product, DWORD flags, HSLP *context)
+{
+    FIXME("(%s,%s,%x,%p) stub\n", wine_dbgstr_guid(app), wine_dbgstr_guid(product), flags, context);
+
+    return S_OK;
+}
+
 HRESULT WINAPI SLPersistApplicationPolicies(const SLID *app, const SLID *product, DWORD flags)
 {
     FIXME("(%s,%s,%x) stub\n", wine_dbgstr_guid(app), wine_dbgstr_guid(product), flags);

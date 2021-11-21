@@ -32,6 +32,7 @@ extern "C" {
 typedef GUID SLID;
 
 typedef PVOID HSLC;
+typedef PVOID HSLP;
 
 typedef enum _tagSLDATATYPE
 {
